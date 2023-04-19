@@ -1,0 +1,27 @@
+<canvas width="600" height="400"> </canvas> <!-- El canvas crea un cuadro para crear dibujos, graficos, formas geometricas, etc -->
+
+<script>
+  var pantalla = document.querySelector("canvas") // La variable toma todo lo que se escriba en el canvas
+  var pincel = pantalla.getContext("2d") // La variable va a tomar todo lo que se dibuje en la pantalla
+
+  pincel.fillStyle = "lightgray" // Color que se va a dibujar
+  pincel.fillRect(0,0,600,400) // Dibuja todo el cuadro de gris
+
+  pincel.fillStyle = "green"
+  pincel.fillRect(0,0,200,400) // El cuadro se divide en 3 y dibuja en el primer cuadrado el color verde
+
+  pincel.fillStyle = "red"
+  pincel.fillRect(400,0,200,400) // El cursor se mueve hasta el ultimo cuadrado y lo dibuja de color rojo
+
+  pincel.fillStyle = "yellow"
+  pincel.beginPath()
+  pincel.moveTo(300,200)
+  pincel.lineTo(200,400)
+  pincel.lineTo(400,400)
+  pincel.fill() // Se mueve el cursor hacia el centro desde abajo y se dibuja un triangulo color amarillo
+
+  pincel.fillStyle = "blue"
+  pincel.beginPath()
+  pincel.arc(300,200,50,0,2*3.14)
+  pincel.fill() // Se crea una circunferencia y se dibuja un circulo en el centro color azul
+</script>
