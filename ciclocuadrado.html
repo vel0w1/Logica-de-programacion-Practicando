@@ -1,0 +1,26 @@
+<canvas width="600" height="400"> </canvas> 
+
+<script>
+  function cuadrados(x,y,color) {
+    var pantalla = document.querySelector("canvas")
+    var pincel = pantalla.getContext("2d")
+
+    pincel.fillStyle = color // Cuadrado color verde
+    pincel.fillRect(x,y,50,50)
+    
+    pincel.strokeStyle = "black" // Borde del cuadrado color negro
+    pincel.strokeRect(x,y,50,50)
+  }
+  
+  /* Ciclo while
+  var x = 0
+  while (x < 600) {
+    cuadrados(x, 0, "green")
+    x = x + 50
+  } */
+
+  for (var x = 0; x <600; x = x +50) {
+    cuadrados(x,0,"red")
+  } // Ciclo for
+
+</script>
